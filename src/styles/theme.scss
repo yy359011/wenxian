@@ -1,0 +1,115 @@
+// =============================================================
+// 主题变量（CSS 自定义属性）+ Element Plus 主题覆盖
+// 采用字面量写法，避免依赖 SCSS 变量注入顺序
+// =============================================================
+
+:root {
+  // 主色系
+  --c-primary: #1d5b6e;
+  --c-primary-deep: #0e2f3d;
+  --c-primary-light: #2f7f96;
+  --c-primary-soft: rgba(29, 91, 110, 0.08);
+
+  // 点缀色
+  --c-gold: #c2a05f;
+  --c-gold-light: #d8b878;
+  --c-seal: #a8372b;
+
+  // 背景 / 纸张
+  --c-paper: #f6f2ea;
+  --c-paper-2: #fbf9f4;
+  --c-white: #ffffff;
+  --c-line: #e4ddd0;
+  --c-line-strong: #d3c9b7;
+
+  // 文字
+  --c-text: #22333b;
+  --c-text-2: #5b6b73;
+  --c-text-3: #8d9aa1;
+  --c-text-invert: #f3efe6;
+
+  // 圆角 / 阴影
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 4px 14px -8px rgba(14, 47, 61, 0.3);
+  --shadow-md: 0 12px 30px -16px rgba(14, 47, 61, 0.4);
+  --shadow-lg: 0 26px 60px -30px rgba(14, 47, 61, 0.55);
+
+  // 字体
+  --font-serif: 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', 'STSong', 'SimSun', serif;
+  --font-sans: 'PingFang SC', 'HarmonyOS Sans SC', 'Microsoft YaHei', 'Helvetica Neue', Arial,
+    sans-serif;
+
+  // 层级
+  --z-header: 900;
+  --z-drawer: 2000;
+
+  // ---------- Element Plus 主题色覆盖 ----------
+  --el-color-primary: #1d5b6e;
+  --el-color-primary-light-3: #618c9a;
+  --el-color-primary-light-5: #8eadb7;
+  --el-color-primary-light-7: #bbced4;
+  --el-color-primary-light-8: #d2dee2;
+  --el-color-primary-light-9: #e8eff1;
+  --el-color-primary-dark-2: #174958;
+  --el-text-color-primary: #22333b;
+  --el-text-color-regular: #5b6b73;
+  --el-text-color-secondary: #8d9aa1;
+  --el-border-color: #e4ddd0;
+  --el-border-color-light: #ece6db;
+  --el-border-radius-base: 8px;
+  --el-font-family: 'PingFang SC', 'HarmonyOS Sans SC', 'Microsoft YaHei', 'Helvetica Neue', Arial,
+    sans-serif;
+  --el-fill-color-blank: #ffffff;
+}
+
+// ---------- 通用工具类 ----------
+.page-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--c-primary-deep);
+  letter-spacing: 0.04em;
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// 卡片基础
+.panel {
+  background: var(--c-white);
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+// ---------- Element Plus 细节微调 ----------
+.el-button {
+  font-weight: 500;
+}
+
+.el-pagination {
+  --el-pagination-font-size: 14px;
+  justify-content: center;
+}
+
+.el-drawer__header {
+  margin-bottom: 0;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--c-line);
+}
+
+.el-tabs__item {
+  font-size: 15px;
+}
